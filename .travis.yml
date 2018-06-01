@@ -163,7 +163,7 @@ after_success:
          mkdir app;
          mv Kivy2.dmg app/Kivy2.dmg;
       fi;
-      rsync -avh -e "ssh -p 2458" --include="*/" --include="*.dmg" --exclude="*" "./app/" "root@$SERVER_IP:/web/downloads/ci/osx/kivy/app/";
+      rsync -avh -e "ssh -p 2458" --include="*/" --include="*.dmg" --exclude="*" "./app/" "root@$SERVER_IP:/web/downloads/ci/osx/app/";
       popd;
     fi;
   - if [ "${TRAVIS_OS_NAME}" == "linux" ] && [ "${RUN}" == "docs" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "master" ]; then
